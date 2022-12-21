@@ -84,23 +84,23 @@
                                     <h4>저기 저 별이</h4>
                                 </div>
                                 <div class="gallery"> 
-                                    <img src="assets/img/part1/01.png" alt="1">
-                                    <img src="assets/img/part1/02.png" alt="2">
-                                    <img src="assets/img/part1/03.png" alt="3">
-                                    <img src="assets/img/part1/04.png" alt="4">
-                                    <img src="assets/img/part1/05.png" alt="5">
-                                    <img src="assets/img/part1/06.png" alt="6">
-                                    <img src="assets/img/part1/07.png" alt="7">
-                                    <img src="assets/img/part1/08.png" alt="8">
-                                    <img src="assets/img/part1/09.png" alt="9">
-                                    <img src="assets/img/part1/10.png" alt="10">
-                                    <img src="assets/img/part1/11.png" alt="11">
-                                    <img src="assets/img/part1/12.png" alt="12">
-                                    <img src="assets/img/part1/13.png" alt="13">
-                                    <img src="assets/img/part1/14.png" alt="14">
-                                    <img src="assets/img/part1/15.png" alt="15">
-                                    <img src="assets/img/part1/16.png" alt="16">
-                                    <img src="assets/img/part1/17.png" alt="17">
+                                    <img data-src="assets/img/part1/01.png" alt="1">
+                                    <img data-src="assets/img/part1/02.png" alt="2">
+                                    <img data-src="assets/img/part1/03.png" alt="3">
+                                    <img data-src="assets/img/part1/04.png" alt="4">
+                                    <img data-src="assets/img/part1/05.png" alt="5">
+                                    <img data-src="assets/img/part1/06.png" alt="6">
+                                    <img data-src="assets/img/part1/07.png" alt="7">
+                                    <img data-src="assets/img/part1/08.png" alt="8">
+                                    <img data-src="assets/img/part1/09.png" alt="9">
+                                    <img data-src="assets/img/part1/10.png" alt="10">
+                                    <img data-src="assets/img/part1/11.png" alt="11">
+                                    <img data-src="assets/img/part1/12.png" alt="12">
+                                    <img data-src="assets/img/part1/13.png" alt="13">
+                                    <img data-src="assets/img/part1/14.png" alt="14">
+                                    <img data-src="assets/img/part1/15.png" alt="15">
+                                    <img data-src="assets/img/part1/16.png" alt="16">
+                                    <img data-src="assets/img/part1/17.png" alt="17">
                                 </div>
                             </li>
                             <li>
@@ -370,6 +370,17 @@
             // ...
             if(this.classList == 'on'){ 
                 this.innerText = "닫기"
+
+                // 내부 이미지 lazy-loading
+                // 참고: 
+                // - https://imagekit.io/blog/lazy-loading-images-complete-guide/
+                // - https://stackoverflow.com/questions/15320052/what-are-all-the-differences-between-src-and-data-src-attributes
+
+                imgs = this.parentNode.parentNode.lastElementChild.children;
+
+                for (j=0; j < imgs.length; j++) {
+                    imgs[j].src = imgs[j].dataset.src;
+                }
             }else{
                 this.innerText = "사진 더보기";
             }
