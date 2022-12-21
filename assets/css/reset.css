@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/*여백 초기화*/
+body, div, dl, dd, dt, ul, li, h1, h2, h3, h4, h5, h6, form, legend, textarea, select, fieldset, p, button, input, ol {margin: 0;padding: 0;}
+/*링크 초기화*/
+a{color:#273743; text-decoration:none;}
+/*a:hover{color:;}*/
+/*폰트 초기화*/
+body, input, textarea, select, button, table{font-family: 'GmarketSans', "Noto Sans KR","나눔 고딕", "Malgun Gothic","맑은 고딕","Nanum Gothic","돋움",Dotum, sans-serif; font-size: 12px; font-weight:300;}
+/*제목 스타일 초기화*/
+h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal;}
+/*블릿기호 초기화*/
+li, ol, ul{list-style:none;}
+/* ir효과*/
+.ir{width:0;height: 0;font-size: 0;line-height:0;overflow: hidden;position:absolute;left: 0;top: 0;}
+/*이탤릭체 초기화*/
+em, address{font-style:normal;}
+/*테두리 초기화*/
+img, fieldset{border:0;}
+/*폰트 굵기 초기화*/
+strong{font-weight:normal;}
+
+select,button,input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    outline: none;
+    border:none;
+  }
+button,a{
+    cursor:pointer;
+  } 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+ir
+.ir{
+  width:0;
+  height:0;
+  font-size:0;
+  line-height:0;
+  overflow:hidden;
+  position:absolute;
+  left:0;
+  top:0;
+} 
